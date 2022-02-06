@@ -20,11 +20,17 @@ class UsersService
     }
 
     public function addUser($request)
-    {
-        $user = $this->userRepository->addUser($request);
+    {   
+        $userDetails = array(
+            'fullname' => trim(strip_tags($request['fullname'])),
+            'email'    => trim(strip_tags($request['email'])),
+        );
+
+        $user = $this->userRepository->addUser($userDetails);
+
         return [
             'message' => 'User has been added',
-            'user' => $user
+            'user'    => $user
         ];
     }
 }
