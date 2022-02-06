@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Users;
 
 // use Illuminate\Foundation\Http\FormRequest;
-use App\Http\Requests\FormRequest; // use the custom class
+use App\Http\Requests\FormRequest; // use the custom forn request class
 
 class UserStoreFormRequest extends FormRequest
 {

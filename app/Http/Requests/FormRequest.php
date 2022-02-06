@@ -1,6 +1,6 @@
 <?php
 /**
- *  created this custom class to override failedValidation() in Laravel's FormRequest class
+ *  Created this custom class to override failedValidation() in Laravel's FormRequest class
  *  and force it to return a JSON reponse 
  */
 namespace App\Http\Requests;
