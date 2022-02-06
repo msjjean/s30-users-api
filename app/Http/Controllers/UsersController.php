@@ -4,24 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Users\UserStoreFormRequest;
-use App\Services\PostServices;
+use App\Services\UsersService;
 
-use App\Models\User;
 
 class UsersController extends Controller
 {
+    private $userService; 
+
+    public function __construct(UsersService $userService)
+    {
+        $this->userService = $userService;
+    }
+
     public function index()
     {
-        return response()->json([
-            'res' => 'get all users'
-        ]);
+        $returnData = $this->userService->getAllUsers();
+        return response()->json($returnData);
     }
 
     public function store(UserStoreFormRequest $request)
     {
-        $validated = $request->validated();
-        return response()->json([
-            'res' => $validated
-        ]);
+        $returnData = $this->userService->addUser($request->validated());
+        return response()->json($returnData);
     }
 }
+
