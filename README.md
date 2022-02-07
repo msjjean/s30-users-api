@@ -17,7 +17,7 @@ git clone REPOSITORY_URL
 
 Go to the folder application using cd command on your cmd or terminal
 ```sh
-cd into your project
+cd project-name
 ```
 
 Install Composer Dependencies
