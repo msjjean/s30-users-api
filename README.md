@@ -15,7 +15,7 @@ Clone this Github repository using the repository url.
 git clone REPOSITORY_URL
 ```
 
-Clone this Github repository using the repository url.
+Go to the folder application using cd command on your cmd or terminal
 ```sh
 cd into your project
 ```
